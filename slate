@@ -1,0 +1,12 @@
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+alias full  move screenOriginX;screenOriginY 1353;669
+alias left  move screenOriginX;screenOriginY  702;669
+alias right move screenOriginX+702;screenOriginY  702;669
+
+
+bind return:shift;cmd ${full}
+bind h:shift;cmd ${left}
+bind l:shift;cmd ${right}
