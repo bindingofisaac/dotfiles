@@ -4,9 +4,13 @@ config resizePercentOf screenSize
 
 alias full  move screenOriginX;screenOriginY 1353;669
 alias left  move screenOriginX;screenOriginY  702;669
-alias right move screenOriginX+702;screenOriginY  702;669
+alias right move screenOriginX+702;screenOriginY  653;669
+alias top move screenOriginX;screenOriginY  1353;334
+alias down move screenOriginX;screenOriginY+335  1353;334
 
 
 bind return:shift;cmd ${full}
 bind h:shift;cmd ${left}
 bind l:shift;cmd ${right}
+bind j:shift;cmd ${down}
+bind k:shift;cmd ${top}
