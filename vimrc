@@ -1,11 +1,13 @@
 set nocompatible
+set nobackup
+set noswapfile
 syntax enable
 set encoding=utf-8
 set showcmd
 filetype plugin indent on
 
 set nowrap
-set tabstop=4 shiftwidth=4
+set tabstop=2 shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
 
@@ -16,3 +18,13 @@ set smartcase
 
 inoremap jk <ESC>
 let mapleader = ','
+
+noremap <Leader>m :wq<CR>
+noremap <Leader>n :w<CR>
+
+nmap <silent> <Leader>/ :nohlsearch<CR>
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
