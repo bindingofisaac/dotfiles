@@ -1,16 +1,18 @@
 config defaultToCurrentScreen true
-config nudgePercentOf screenSize
-config resizePercentOf screenSize
+config nudgePercentOf Size
+config resizePercentOf Size
 
-alias full  move screenOriginX;screenOriginY 1358;614
-alias left  move screenOriginX;screenOriginY  702;669
-alias right move screenOriginX+702;screenOriginY  653;669
-alias top move screenOriginX;screenOriginY  1353;334
-alias down move screenOriginX;screenOriginY+335  1353;334
+alias SizeX 1358
+alias SizeY 614
 
+alias full move screenOriginX;screenOriginY ${SizeX};${SizeY}
+alias lefthalf move screenOriginX;screenOriginY ${SizeX}/2;${SizeY}
+alias righthalf move screenOriginX+${SizeX}/2;screenOriginY ${SizeX}/2;${SizeY}
+alias topleft corner top-left resize:${SizeX}/2;${SizeY}/2
+alias topright corner top-right resize:${SizeX}/2;${SizeY}/2
 
 bind return:shift;cmd ${full}
-bind h:shift;cmd ${left}
-bind l:shift;cmd ${right}
-bind j:shift;cmd ${down}
-bind k:shift;cmd ${top}
+bind h:shift;cmd ${lefthalf}
+bind l:shift;cmd ${righthalf}
+bind u:shift;cmd ${topleft}
+bind i:shift;cmd ${topright}
