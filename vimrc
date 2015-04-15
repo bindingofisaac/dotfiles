@@ -16,11 +16,14 @@ set incsearch
 set ignorecase
 set smartcase
 
-inoremap jk <ESC>
+inoremap jk <ESC>:w<CR>
 let mapleader = ','
 
 noremap <Leader>m :wq<CR>
 noremap <Leader>n :w<CR>
+
+nnoremap ; :
+nnoremap : ;
 
 nmap <silent> <Leader>/ :nohlsearch<CR>
 
