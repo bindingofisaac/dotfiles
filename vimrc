@@ -23,7 +23,6 @@ noremap <Leader>m :wq<CR>
 noremap <Leader>n :w<CR>
 
 nnoremap ; :
-nnoremap : ;
 
 nmap <silent> <Leader>/ :nohlsearch<CR>
 
