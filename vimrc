@@ -17,6 +17,8 @@ set ignorecase
 set smartcase
 
 inoremap jk <ESC>:w<CR>
+inoremap ,m <ESC>:wq<CR>
+
 let mapleader = ','
 
 noremap <Leader>m :wq<CR>
