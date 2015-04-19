@@ -18,6 +18,7 @@ set smartcase
 
 inoremap jk <ESC>:w<CR>
 inoremap ,m <ESC>:wq<CR>
+inoremap <ESC> <ESC>:w<CR>
 
 let mapleader = ','
 
