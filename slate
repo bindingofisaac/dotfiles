@@ -1,22 +1,36 @@
+#Configuration is split into the following directives:
+
+# config (for global configurations)
+
 config defaultToCurrentScreen true
-config nudgePercentOf Size
-config resizePercentOf Size
+config resizePercentOf screenSize
 
-#alias SizeX 1358
-#alias SizeY 614
+# alias (to create alias variables)
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
-alias SizeX screenSizeX
-alias SizeY screenSizeY
+alias hyper ctrl;shift;alt;cmd
 
+# key bindings
 
-alias full move screenOriginX;screenOriginY ${SizeX};${SizeY}
-alias lefthalf move screenOriginX;screenOriginY ${SizeX}/2;${SizeY}
-alias righthalf move screenOriginX+${SizeX}/2;screenOriginY ${SizeX}/2;${SizeY}
-alias topleft corner top-left resize:${SizeX}/2;${SizeY}/2
-alias topright corner top-right resize:${SizeX}/2;${SizeY}/2
+bind l:${hyper}    focus right
+bind h:${hyper}     focus left
+bind k:${hyper}       focus up
+bind j:${hyper}     focus down
 
-bind return:shift;cmd ${full}
-bind h:shift;cmd ${lefthalf}
-bind l:shift;cmd ${righthalf}
-bind u:shift;cmd ${topleft}
-bind i:shift;cmd ${topright}
+bind e:${hyper} ${topleft}
+bind r:${hyper} ${tophalf}
+bind t:${hyper} ${topright}
+bind d:${hyper} ${lefthalf}
+bind f:${hyper} ${full}
+bind g:${hyper} ${righthalf}
+bind c:${hyper} ${bottomleft}
+bind v:${hyper} ${bottomhalf}
+bind b:${hyper} ${bottomright}
