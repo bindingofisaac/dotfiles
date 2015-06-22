@@ -2,8 +2,12 @@ config defaultToCurrentScreen true
 config nudgePercentOf Size
 config resizePercentOf Size
 
-alias SizeX 1358
-alias SizeY 614
+#alias SizeX 1358
+#alias SizeY 614
+
+alias SizeX screenSizeX
+alias SizeY screenSizeY
+
 
 alias full move screenOriginX;screenOriginY ${SizeX};${SizeY}
 alias lefthalf move screenOriginX;screenOriginY ${SizeX}/2;${SizeY}

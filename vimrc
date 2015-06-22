@@ -7,7 +7,7 @@ set showcmd
 filetype plugin indent on
 
 set nowrap
-set tabstop=2 shiftwidth=2
+set tabstop=4 shiftwidth=4
 set expandtab
 set backspace=indent,eol,start
 
