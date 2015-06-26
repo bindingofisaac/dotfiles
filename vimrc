@@ -16,20 +16,24 @@ set incsearch
 set ignorecase
 set smartcase
 
-inoremap jk <ESC>:w<CR>
-inoremap ,m <ESC>:wq<CR>
-inoremap <ESC> <ESC>:w<CR>
-
 let mapleader = ','
-
 noremap <Leader>m :wq<CR>
 noremap <Leader>n :w<CR>
-
 nnoremap ; :
 
 nmap <silent> <Leader>/ :nohlsearch<CR>
 
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
 map <right> <nop>
+map <up> <nop>
+map <left> <nop>
+map <down> <nop>
+inoremap <esc> <nop>
+
+noremap - dd p
+inoremap <c-d> <esc>ddi
+inoremap <c-u> <esc>viwUi
+inoremap jk <esc>
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>' viw<esc>a"<esc>hbi"<esc>lel
