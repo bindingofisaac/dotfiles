@@ -1,1 +1,1 @@
-alias python=ghci
+alias serve='python -m SimpleHTTPServer'

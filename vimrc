@@ -1,4 +1,3 @@
-set nocompatible
 set nobackup
 set noswapfile
 syntax enable
@@ -19,7 +18,6 @@ set smartcase
 let mapleader = ','
 noremap <Leader>m :wq<CR>
 noremap <Leader>n :w<CR>
-nnoremap ; :
 
 nmap <silent> <Leader>/ :nohlsearch<CR>
 
@@ -37,3 +35,10 @@ inoremap jk <esc>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>' viw<esc>a"<esc>hbi"<esc>lel
+
+set exrc
+set secure
+execute pathogen#infect()
+
+let &t_Co=256
+colorscheme molokai
